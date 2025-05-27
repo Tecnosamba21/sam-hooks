@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ProgressiveCountOptions } from "./types";
+import { ProgressiveCountOptions } from "../types";
 
 export function useProgressiveCount(value: number, options: ProgressiveCountOptions = { inicialValue: 0, interval: 500, incrementalValue: 1 }): number {
     const [count, setCount] = useState<number>(options.inicialValue)

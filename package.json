@@ -1,23 +1,56 @@
 {
-  "name": "sam-hooks",
+  "name": "@tecnosamba21/sam-hooks",
   "version": "1.0.0",
   "description": "A custom react hooks library for your applications",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist"
+    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist",
+    "prepublishOnly": "pnpm run build"
   },
-  "keywords": ["react", "hooks", "react-hooks", "custom-hooks", "utilities", "typescript"],
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "custom-hooks",
+    "utilities",
+    "typescript"
+  ],
   "author": "TecnoSamba21",
   "license": "MIT",
   "dependencies": {
-    "react": "19.1.0",
+    "react": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.5",
     "tsup": "^8.5.0",
     "typescript": "5.8.3"
   },
-  "devDependencies": {
-    "@types/react": "19.1.5"
-  },
   "peerDependencies": {
     "react": "^19.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tecnosamba21/sam-hooks"
+  },
+  "bugs": {
+    "url": "https://github.com/Tecnosamba21/sam-hooks/issues"
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "declaration": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src"
+  ]
 }
