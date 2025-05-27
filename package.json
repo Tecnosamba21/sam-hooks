@@ -1,10 +1,10 @@
 {
   "name": "@tecnosamba21/sam-hooks",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A custom react hooks library for your applications",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.mts",
   "files": [
     "dist"
   ],

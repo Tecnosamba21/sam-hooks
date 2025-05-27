@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useCycle<T>(array: T[], interval: number = 500): T | Error {
+export function useCycle<T>(array: T[], interval: number = 500): T {
     const [step, setStep] = useState<T>(array[0])
     let index = useRef(0)
 
-    if (!array.length) return new Error('useCycle: the array given must not be empty')
 
     useEffect(() => {
+
+        if (!array.length) return
+
         const intervalId = setInterval(() => {
             setStep(prevStep => {
                 if (index.current >= array.length) {
